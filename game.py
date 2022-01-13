@@ -11,7 +11,7 @@ UNDERLINED_BLANK = "\033[4m \033[0m"
 
 def input_theme():
     os.system('cls')
-    print("Available themes:\n1 - Animals\n") 
+    print("Available themes:\n1 - Animals\n2 - Countries\n") 
     theme = input("Enter the NUMBER corresponding to the name of the theme you want to play: ")
     game(theme) if theme.isnumeric() and int(theme) <= len(available_themes) else input_theme()
 
@@ -134,12 +134,6 @@ def construct_word(word, wrong_letters, correct_letters):
         print(i.upper(), end=" ")
     print("\n")
 
-    # print("Correct letters: ", end="")
-    # for i in correct_letters:
-    #     print(i.upper(), end=" ")
-    
-    # print([i for i in set(word)])
-
     # Underlines where correct letters are revealed
     for letter in word:
         if letter == WORD_SPACE:
@@ -151,8 +145,7 @@ def construct_word(word, wrong_letters, correct_letters):
             else:
                 print(UNDERLINED_BLANK, end="")
             print(UNDERLINED_BLANK, end=" ")
-    
-    print("")
+    print("\n")
 
 def game_win(word):
     input("\nCongrats! You've guessed the correct word!. Press Enter to play again.")
