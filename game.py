@@ -1,7 +1,7 @@
 import string, os, random
 
 alphabet_list = [i for i in string.ascii_lowercase]
-available_themes = ["animals"]
+available_themes = ["animals", "countries"]
 
 WORD_UNDERLINE = "___"
 WORD_SPACE = " "
